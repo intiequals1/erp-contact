@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /historie/archiv/
+
+Sitemap: https://www.erp.contact/sitemap.xml

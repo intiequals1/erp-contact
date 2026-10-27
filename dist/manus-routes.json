@@ -1,0 +1,184 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "title": "ERP.Contact — ERP, Prozesse und verantwortungsvolle KI"
+    },
+    {
+      "path": "/erp/grundlagen/",
+      "title": "ERP-Grundlagen: Integration und Konfigurierbarkeit"
+    },
+    {
+      "path": "/erp/module/",
+      "title": "ERP-Module: Funktionen im Unternehmenskontext"
+    },
+    {
+      "path": "/erp/cloud/",
+      "title": "Cloud ERP: Ein Überblick für Unternehmenssysteme"
+    },
+    {
+      "path": "/erp/konzepte/",
+      "title": "ERP-Konzepte: Struktur, Stamm- und Bewegungsdaten"
+    },
+    {
+      "path": "/erp/datenbanken/",
+      "title": "ERP-Datenbanken: In-Memory und Kompression"
+    },
+    {
+      "path": "/prozesse/",
+      "title": "Integrierte Geschäftsprozesse im ERP-Kontext"
+    },
+    {
+      "path": "/prozesse/record-to-report/",
+      "title": "Record-to-Report: Finanzprozesse im ERP"
+    },
+    {
+      "path": "/prozesse/recruit-to-retire/",
+      "title": "Recruit-to-Retire: HR-Prozess im ERP-Kontext"
+    },
+    {
+      "path": "/prozesse/source-to-pay/",
+      "title": "Source-to-Pay: Beschaffung im ERP-Kontext"
+    },
+    {
+      "path": "/prozesse/design-to-operate/",
+      "title": "Design-to-Operate: Vom Entwurf zum Betrieb"
+    },
+    {
+      "path": "/prozesse/lead-to-cash/",
+      "title": "Lead-to-Cash: Von Nachfrage zu Zahlung"
+    },
+    {
+      "path": "/transformation/",
+      "title": "ERP-Transformation: Projekte, Architektur und APIs"
+    },
+    {
+      "path": "/transformation/portfolio-projektmanagement/",
+      "title": "Portfolio und Projektmanagement im ERP-Kontext"
+    },
+    {
+      "path": "/transformation/s4hana-eppm/",
+      "title": "SAP S/4HANA EPPM: Portfolio und Projektmanagement"
+    },
+    {
+      "path": "/transformation/projektmanagement/",
+      "title": "Projektmanagement: Methoden im ERP-Kontext"
+    },
+    {
+      "path": "/transformation/sap-activate/",
+      "title": "SAP Activate: Best Practices und Methodik"
+    },
+    {
+      "path": "/transformation/enterprise-architecture/",
+      "title": "Enterprise Architecture: Systeme bewusst gestalten"
+    },
+    {
+      "path": "/transformation/apis/",
+      "title": "APIs: ERP-Integration und REST verständlich"
+    },
+    {
+      "path": "/ki/",
+      "title": "Künstliche Intelligenz im ERP-Kontext"
+    },
+    {
+      "path": "/ki/ethik/",
+      "title": "KI-Ethik: Verantwortung im ERP-Kontext"
+    },
+    {
+      "path": "/ki-transparenz/",
+      "title": "KI-Transparenz — ERP.Contact"
+    },
+    {
+      "path": "/ressourcen/",
+      "title": "ERP-Ressourcen: Begriffe, Trainer und Werkstätten"
+    },
+    {
+      "path": "/ressourcen/perplexity-projekte/",
+      "title": "ERP Research Briefings: zwei Perplexity-Projekte"
+    },
+    {
+      "path": "/projekte/",
+      "title": "ERP-nahe Konzepte und Prototypen"
+    },
+    {
+      "path": "/ueber/",
+      "title": "Über ERP.Contact und Claudiu Dangulea"
+    },
+    {
+      "path": "/impressum/",
+      "title": "Impressum — ERP.Contact"
+    },
+    {
+      "path": "/historie/",
+      "title": "Historie: ERP.Contact Version 1 und Version 2"
+    },
+    {
+      "path": "/historie/archiv/01-erp-grundlagen-module/",
+      "title": "Version 1: ERP-Grundlagen und ERP-Module | ERP.Contact"
+    },
+    {
+      "path": "/historie/archiv/02-cloud-erp/",
+      "title": "Version 1: Cloud-ERP-Überblick | ERP.Contact"
+    },
+    {
+      "path": "/historie/archiv/03-autorenprofil/",
+      "title": "Version 1: Autorenprofil | ERP.Contact"
+    },
+    {
+      "path": "/historie/archiv/04-portfolio-projektmanagement/",
+      "title": "Version 1: Portfolio & Projektmanagement | ERP.Contact"
+    },
+    {
+      "path": "/historie/archiv/05-s4hana-eppm/",
+      "title": "Version 1: SAP S/4HANA EPPM | ERP.Contact"
+    },
+    {
+      "path": "/historie/archiv/06-pm-activate/",
+      "title": "Version 1: Projektmanagement und SAP Activate | ERP.Contact"
+    },
+    {
+      "path": "/historie/archiv/07-enterprise-architecture-apis/",
+      "title": "Version 1: Enterprise Architecture und APIs | ERP.Contact"
+    },
+    {
+      "path": "/historie/archiv/08-integrierte-prozesse/",
+      "title": "Version 1: Integrierte Geschäftsprozesse | ERP.Contact"
+    },
+    {
+      "path": "/historie/archiv/09-record-to-report/",
+      "title": "Version 1: Record-to-Report | ERP.Contact"
+    },
+    {
+      "path": "/historie/archiv/10-recruit-to-retire/",
+      "title": "Version 1: Recruit-to-Retire | ERP.Contact"
+    },
+    {
+      "path": "/historie/archiv/11-source-to-pay/",
+      "title": "Version 1: Source-to-Pay | ERP.Contact"
+    },
+    {
+      "path": "/historie/archiv/12-design-to-operate/",
+      "title": "Version 1: Design-to-Operate | ERP.Contact"
+    },
+    {
+      "path": "/historie/archiv/13-lead-to-cash/",
+      "title": "Version 1: Lead-to-Cash | ERP.Contact"
+    },
+    {
+      "path": "/historie/archiv/14-konzepte-datenbanken/",
+      "title": "Version 1: Zentrale Konzepte und Datenbanken | ERP.Contact"
+    },
+    {
+      "path": "/historie/archiv/15-ki-ethik/",
+      "title": "Version 1: Künstliche Intelligenz und KI-Ethik | ERP.Contact"
+    },
+    {
+      "path": "/historie/archiv/16-ressourcen-blog/",
+      "title": "Version 1: Ressourcen und Blog-Hinweise | ERP.Contact"
+    },
+    {
+      "path": "/historie/archiv/17-impressum-historie/",
+      "title": "Version 1: Impressum und historische Hinweise | ERP.Contact"
+    }
+  ]
+}
