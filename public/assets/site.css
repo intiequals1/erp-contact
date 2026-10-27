@@ -96,13 +96,41 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--ochre); outline
 .project-card:last-child:nth-child(odd) { grid-column: span 2; }
 
 .research-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 1.35rem; }
-.research-card { display: flex; flex-direction: column; min-height: 20rem; padding: 1.4rem; border-top: 4px solid var(--teal); background: var(--white); box-shadow: var(--shadow); }
-.research-kind { margin: 0; color: var(--teal); font: 700 0.7rem/1.2 var(--mono); letter-spacing: 0.09em; text-transform: uppercase; }
-.research-card h3 { margin: 1rem 0 0.45rem; font-size: 1.4rem; line-height: 1.08; letter-spacing: -0.035em; }
-.research-card > p:not(.research-kind) { margin: 0.65rem 0 0; color: var(--muted); line-height: 1.55; }
-.research-meta { display: grid; gap: 0.35rem; margin: auto 0 0; padding-top: 1.2rem; color: var(--muted); font: 0.72rem/1.45 var(--mono); }
-.research-meta span:first-child { color: #6d531b; }
-.research-card .text-link { margin-top: 1rem; }
+.research-card { display: flex; flex-direction: column; min-height: 41rem; padding: 1.35rem; border-top: 4px solid var(--teal); background: var(--white); box-shadow: var(--shadow); }
+.research-card-header { display: flex; align-items: start; justify-content: space-between; gap: 0.85rem; }
+.research-kind, .research-label { margin: 0; color: var(--teal); font: 700 0.68rem/1.25 var(--mono); letter-spacing: 0.09em; text-transform: uppercase; }
+.research-node { display: inline-block; width: 0.58rem; height: 0.58rem; margin-right: 0.38rem; border: 1px solid var(--teal); border-radius: 50%; vertical-align: -0.04rem; background: var(--paper); box-shadow: inset 0 0 0 0.13rem var(--ochre); }
+.research-stage { max-width: 13rem; margin: 0; color: #6d531b; text-align: right; font: 650 0.64rem/1.35 var(--mono); }
+.research-card h3 { margin: 1.05rem 0 0.45rem; font-size: 1.65rem; line-height: 1.05; letter-spacing: -0.045em; }
+.research-summary { margin: 0; color: var(--muted); line-height: 1.55; }
+.research-status { margin-top: 1.2rem; padding: 0.95rem 0 0.9rem; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.research-timestamp { margin: 0.28rem 0 0; color: var(--muted); font: 0.68rem/1.35 var(--mono); }
+.research-status ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.35rem; list-style: none; padding: 0; margin: 0.95rem 0 0; }
+.research-status li { position: relative; padding: 0.55rem 0.45rem 0 0.75rem; border-left: 1px solid var(--line); }
+.research-status li::before { content: ''; position: absolute; top: -0.19rem; left: -0.21rem; width: 0.35rem; height: 0.35rem; border-radius: 50%; background: var(--ochre); }
+.research-status li:nth-child(2)::before { background: var(--teal); }
+.research-status li span, .research-status li strong { display: block; }
+.research-status li span { color: var(--muted); font-size: 0.64rem; line-height: 1.3; }
+.research-status li strong { margin-top: 0.1rem; color: var(--ink); font-size: 0.73rem; line-height: 1.25; }
+.research-cluster-block { margin-top: 1.2rem; }
+.research-block-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.research-block-heading > span { color: var(--muted); font: 0.65rem/1 var(--mono); }
+.research-clusters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.45rem; list-style: none; padding: 0; margin: 0.7rem 0 0; }
+.research-clusters a { position: relative; display: grid; min-height: 9rem; padding: 0.75rem; border: 1px solid var(--line); background: #fbfaf6; color: var(--ink); text-decoration: none; transition: background 180ms ease, transform 180ms ease; }
+.research-clusters a:hover { background: #eaf3f0; transform: translateY(-0.12rem); }
+.cluster-code { color: var(--teal); font: 700 0.64rem/1 var(--mono); }
+.cluster-label { margin-top: 0.5rem; color: var(--muted); font: 650 0.6rem/1.2 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; }
+.research-clusters strong { margin-top: 0.22rem; font-size: 0.84rem; line-height: 1.15; letter-spacing: -0.015em; }
+.cluster-text { margin-top: 0.38rem; color: var(--muted); font-size: 0.72rem; line-height: 1.38; }
+.cluster-arrow { position: absolute; right: 0.65rem; bottom: 0.5rem; color: var(--teal); }
+.research-reference-block { margin-top: 1.2rem; }
+.research-reference-block ul { display: grid; gap: 0.35rem; list-style: none; padding: 0; margin: 0.7rem 0 0; }
+.research-reference-block a { display: flex; justify-content: space-between; gap: 0.8rem; padding-bottom: 0.34rem; border-bottom: 1px solid var(--line); text-decoration: none; }
+.research-reference-block strong { font-size: 0.78rem; }
+.research-reference-block span { color: var(--muted); text-align: right; font-size: 0.68rem; line-height: 1.35; }
+.research-disclosure { display: grid; grid-template-columns: 1.55rem minmax(0, 1fr); gap: 0.55rem; margin-top: 1.25rem; padding: 0.7rem; background: #e7f1ee; }
+.research-disclosure > span { display: grid; place-items: center; width: 1.45rem; height: 1.45rem; border: 1px solid var(--teal); border-radius: 50%; color: var(--teal); font: 700 0.54rem/1 var(--mono); }
+.research-disclosure p { margin: 0; color: var(--ink); font-size: 0.7rem; line-height: 1.42; }
 
 .archive-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; margin-top: 1.35rem; background: var(--line); border: 1px solid var(--line); }
 .archive-card { min-height: 13rem; padding: 1.25rem; background: var(--white); }
@@ -165,6 +193,13 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--ochre); outline
   .feature-grid, .archive-grid, .project-grid, .research-grid { grid-template-columns: 1fr; }
   .feature-card:last-child:nth-child(odd), .project-card:last-child:nth-child(odd), .archive-card:last-child:nth-child(odd) { grid-column: auto; }
   .feature-card { min-height: 11.5rem; }
+  .research-card { min-height: 0; }
+  .research-card-header { display: block; }
+  .research-stage { max-width: none; margin-top: 0.4rem; text-align: left; }
+  .research-status ul, .research-clusters { grid-template-columns: 1fr; }
+  .research-clusters a { min-height: 7rem; }
+  .research-reference-block a { display: grid; gap: 0.18rem; }
+  .research-reference-block span { text-align: left; }
   .section-heading h2 { font-size: 1.75rem; }
   .related-panel ul { grid-template-columns: 1fr; }
   .footer-shell { width: min(100% - 1.5rem, 1440px); grid-template-columns: 1fr; gap: 1.5rem; }

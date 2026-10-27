@@ -81,4 +81,4 @@ Es werden keine Aussagen über nicht belegte Projektfunktionen, Detail-URLs oder
 
 ## Research Briefings
 
-Die zwei Perplexity-Projekte „ERP Brief“ und „ERP Postimplementierung“ sind als eigene, statusklare Ressourcenseite eingebunden. Ihre Pflege ist für einen angemeldeten Browserzugriff vorgesehen und verwendet weder Perplexity-API noch API-Guthaben. Cookie-, Anmelde- und Fehlerseiten werden nicht als fachliche Inhalte verarbeitet. Erst nach einem erfolgreichen Zugriff auf die tatsächlichen Projektinhalte wird ein sinnvoller täglicher Pflegeablauf definiert.
+Die zwei Research-Bereiche „ERP Brief“ und „ERP Postimplementierung“ sind als eigene, statusklare Ressourcenseite eingebunden. Ihre Pflege ist für einen angemeldeten Browserzugriff vorgesehen und verwendet keine externe Programmierschnittstelle oder Guthaben. Cookie-, Anmelde- und Fehlerseiten werden nicht als fachliche Inhalte verarbeitet. Erst nach einem erfolgreichen Zugriff auf die tatsächlichen Projektinhalte wird ein sinnvoller täglicher Pflegeablauf definiert.

@@ -424,7 +424,7 @@ export const PAGES = [
     blocks: [
       { type: 'links', heading: 'Geprüfte Einstiegspunkte', items: [
         external('ERP Terminology Trainer', 'https://trainer.erp.contact/', 'Ein systemübergreifender Begriffstrainer für SAP, Dynamics 365, Odoo und generische ERP-Konzepte — mit Rollenperspektiven und Vergleichsfunktion.'),
-        internal('ERP Research Briefings', '/ressourcen/perplexity-projekte/', 'Zwei Perplexity-Recherchebereiche für ERP-Briefing und Postimplementierung.'),
+        internal('ERP Research Briefings', '/ressourcen/research-briefings/', 'Zwei KI-gestützte Research-Bereiche für ERP-Briefing und Postimplementierung.'),
         external('Dangulea.at', 'https://www.dangulea.at/', 'Persönlicher Arbeits- und Projektkontext des Herausgebers.'),
         external('Digitalpath', 'https://www.digitalpath.at/', 'Unabhängiges Projektlabor für Konzepte, Prototypen und nachvollziehbare Reifegrade.'),
         external('Coolwebtoday.org', 'https://www.coolwebtoday.org/', 'Tool- und Journey-Werkstatt für konkrete digitale Vorhaben.'),
@@ -436,15 +436,15 @@ export const PAGES = [
     ], related: [internal('ERP-Grundlagen', '/erp/grundlagen/', 'Begriffe im Kontext'), internal('Projekte', '/projekte/', 'Konzepte und Prototypen')]
   },
   {
-    path: '/ressourcen/perplexity-projekte', section: 'Ressourcen', title: 'ERP Research Briefings: aktuelle Recherchebereiche',
-    metaTitle: 'ERP Research Briefings: zwei Perplexity-Projekte', description: 'ERP Brief und ERP Postimplementierung als zwei vernetzte Recherchebereiche mit transparentem Aktualisierungsstatus.',
-    keywords: 'ERP Brief, ERP Postimplementierung, Perplexity, ERP Recherche, Research Briefing', eyebrow: 'Ressourcen · Research Briefings',
+    path: '/ressourcen/research-briefings', section: 'Ressourcen', title: 'ERP Research Briefings: aktuelle Recherchebereiche',
+    metaTitle: 'ERP Research Briefings: zwei KI-gestützte Arbeitsbereiche', description: 'ERP Brief und ERP Postimplementierung als zwei vernetzte Research-Bereiche mit transparentem Arbeitsstand und KI-Offenlegung.',
+    keywords: 'ERP Brief, ERP Postimplementierung, ERP Recherche, Research Briefing, KI-Transparenz', eyebrow: 'Ressourcen · Research Briefings',
     lead: 'Zwei Recherchebereiche bündeln aktuelle Fragestellungen zu ERP und Postimplementierung. Status, Quellenzugriff und Zeitstempel bleiben sichtbar.',
     blocks: [
-      { type: 'prose', heading: 'Recherche als fortlaufender Arbeitsstand', paragraphs: ['ERP Research Briefings verbinden aktuelle Recherche mit einer klaren Einordnung in die Wissensbasis. Jeder Bereich bleibt direkt mit seinem Projekt verknüpft und erhält einen sichtbaren Aktualisierungsstatus.', 'Die Pflege erfolgt über einen angemeldeten Browserzugriff und benötigt weder Perplexity-API noch API-Guthaben. Ohne lesbaren Projektinhalt werden keine Zusammenfassungen erfunden oder aus Cookie- und Anmeldeseiten abgeleitet.'] },
-      { type: 'perplexity-projects', heading: 'Zwei vernetzte Recherchebereiche' },
-      { type: 'note', tone: 'teal', title: 'Aktualisierungsprinzip', text: 'Jede Aktualisierung nennt ihren Stand. Projektinhalte bleiben von Linkstatus, Zugriffsvoraussetzungen und redaktioneller Einordnung unterscheidbar; eine API-Nutzung ist nicht vorgesehen.' }
-    ], related: [internal('Ressourcen', '/ressourcen/', 'Zur Ressourcenübersicht'), internal('Projekte', '/projekte/', 'Konzepte und Prototypen')]
+      { type: 'prose', heading: 'Recherche als fortlaufender Arbeitsstand', paragraphs: ['ERP Research Briefings verbinden aktuelle Recherche mit einer klaren Einordnung in die Wissensbasis. Jeder Bereich zeigt seinen Arbeitsstand, einen redaktionellen Themenrahmen und weiterführende Fachverweise.', 'Die Themencluster dienen der Orientierung und behaupten keine Inhalte, die im jeweiligen Arbeitsbereich noch nicht lesbar sind. Sichtbare Kurzfassungen werden erst nach nachvollziehbarem Quellenzugriff ergänzt und durch den Herausgeber geprüft.'] },
+      { type: 'research-briefings', heading: 'Zwei vernetzte Recherchebereiche' },
+      { type: 'note', tone: 'teal', title: 'KI-Offenlegung', text: 'Die Themencluster und spätere Kurzfassungen können KI-unterstützt entstehen. Vor einer sichtbaren Aktualisierung prüft der verantwortliche Herausgeber Relevanz, Kontext und Formulierung.' }
+    ], related: [internal('Ressourcen', '/ressourcen/', 'Zur Ressourcenübersicht'), internal('KI-Transparenz', '/ki-transparenz/', 'Rolle von KI nachvollziehen'), internal('Projekte', '/projekte/', 'Konzepte und Prototypen')]
   },
   {
     path: '/projekte', section: 'Projekte', title: 'Projekte: Konzepte und Prototypen transparent einordnen',

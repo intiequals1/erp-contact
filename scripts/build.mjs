@@ -1,7 +1,7 @@
 import { cp, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { dirname, join, resolve } from 'node:path';
 import { ARCHIVE, FOOTER_LINKS, NAV, PAGES, SITE } from '../src/content.mjs';
-import { PERPLEXITY_PROJECTS } from '../src/perplexity-projects.mjs';
+import { RESEARCH_BRIEFINGS } from '../src/research-briefings.mjs';
 
 const root = resolve(import.meta.dirname, '..');
 const dist = join(root, 'dist');
@@ -76,12 +76,14 @@ function renderProjectGrid(block) {
   </section>`;
 }
 
-function renderPerplexityProjects(block) {
+function renderResearchBriefings(block) {
   return `<section class="content-section">
     <div class="section-heading"><p class="section-kicker">Recherchebereiche</p><h2>${block.heading}</h2></div>
-    <div class="research-grid">${PERPLEXITY_PROJECTS.map((project) => {
-      const timestamp = project.lastUpdated ? `Stand: ${project.lastUpdated}` : 'Noch keine autorisierte Inhaltsaktualisierung';
-      return `<article class="research-card"><p class="research-kind">${project.kind}</p><h3>${project.title}</h3><p>${project.summary}</p><div class="research-meta"><span>${project.updateStatus}</span><span>${timestamp}</span></div><a class="text-link" href="${project.url}" target="_blank" rel="noopener noreferrer">Projekt bei Perplexity öffnen <span aria-hidden="true">↗</span><span class="sr-only"> (öffnet in neuem Tab)</span></a></article>`;
+    <div class="research-grid">${RESEARCH_BRIEFINGS.map((project) => {
+      const statusItems = project.statusSteps.map((step) => `<li><span>${esc(step.label)}</span><strong>${esc(step.value)}</strong></li>`).join('');
+      const clusters = project.clusters.map((cluster) => `<li><a href="${esc(cluster.href)}"><span class="cluster-code">${esc(cluster.code)}</span><span class="cluster-label">${esc(cluster.label)}</span><strong>${esc(cluster.title)}</strong><span class="cluster-text">${esc(cluster.text)}</span><span class="cluster-arrow" aria-hidden="true">→</span></a></li>`).join('');
+      const references = project.references.map((reference) => `<li><a href="${esc(reference.href)}"><strong>${esc(reference.label)}</strong><span>${esc(reference.context)}</span></a></li>`).join('');
+      return `<article class="research-card"><header class="research-card-header"><p class="research-kind"><span class="research-node" aria-hidden="true"></span>${esc(project.kind)}</p><p class="research-stage">${esc(project.stage)}</p></header><h3>${esc(project.title)}</h3><p class="research-summary">${esc(project.summary)}</p><section class="research-status" aria-labelledby="${esc(project.id)}-status"><div><p class="research-label" id="${esc(project.id)}-status">Arbeitsstand</p><p class="research-timestamp">${esc(project.lastUpdated)}</p></div><ul>${statusItems}</ul></section><section class="research-cluster-block" aria-labelledby="${esc(project.id)}-clusters"><div class="research-block-heading"><p class="research-label" id="${esc(project.id)}-clusters">Themencluster</p><span>4 Perspektiven</span></div><ul class="research-clusters">${clusters}</ul></section><section class="research-reference-block" aria-labelledby="${esc(project.id)}-references"><p class="research-label" id="${esc(project.id)}-references">Weiterführende Verweise</p><ul>${references}</ul></section><aside class="research-disclosure"><span aria-hidden="true">KI</span><p>${esc(project.disclosure)}</p></aside></article>`;
     }).join('')}</div>
   </section>`;
 }
@@ -185,7 +187,7 @@ function renderBlock(block) {
   if (block.type === 'note') return renderNote(block);
   if (block.type === 'links') return renderLinks(block);
   if (block.type === 'project-grid') return renderProjectGrid(block);
-  if (block.type === 'perplexity-projects') return renderPerplexityProjects(block);
+  if (block.type === 'research-briefings') return renderResearchBriefings(block);
   if (block.type === 'history-grid') return renderHistoryGrid();
   return '';
 }
