@@ -1,16 +1,16 @@
-# ERP.Contact — Implementierungsplan für Version 2
+# ERP.Contact — Implementierungsplan
 
 ## Ausgangslage und Ziel
 
-ERP.Contact wird als eigenständige, deutschsprachige, öffentliche Wissenswebsite neu aufgebaut. Sie löst die bisherige Google-Sites-Struktur ab, bewahrt diese zugleich als öffentlich erreichbare **Version 1** mit quellennaher Inhaltsaufnahme und macht den Neuaufbau klar als **Version 2** sichtbar. Die Informationsseite richtet sich an Menschen, die ERP-Systeme, Geschäftsprozesse, Projekt- und Architekturarbeit sowie den Einsatz von KI fachlich einordnen wollen.
+ERP.Contact wird als eigenständige, deutschsprachige Wissenswebsite aufgebaut. Die aktuelle Informationsseite richtet sich an Menschen, die ERP-Systeme, Geschäftsprozesse, Projekt- und Architekturarbeit sowie den Einsatz von KI fachlich einordnen wollen. Eine getrennte Historie bewahrt die frühere Google-Sites-Struktur als nachvollziehbaren Archivbereich, ohne die fachlichen Seiten davon abhängig zu machen.
 
-Das Projekt wird als statische Website ohne Datenbank, Login oder Server umgesetzt. Der Build erzeugt für jede Informationsseite eine eigene vollständige HTML-Datei. Dadurch bleiben Inhalte, Seitentitel, Beschreibungen und Open-Graph-Daten ohne JavaScript lesbar. Interaktionen beschränken sich auf progressive Verbesserungen: Mobilnavigation, Seitensuche/Filter im Browser und aufklappbare Detailbereiche.
+Das Projekt wird als statische Website ohne Datenbank, Login oder Server umgesetzt. Der Build erzeugt für jede Informationsseite eine eigene vollständige HTML-Datei. Dadurch bleiben Inhalte, Seitentitel, Beschreibungen und Open-Graph-Daten ohne JavaScript lesbar. Interaktionen beschränken sich auf progressive Verbesserungen der Mobilnavigation.
 
 ## Quellengrundlage und Migration
 
 Die öffentliche Bestandsaufnahme wird im Repository unter `research/version-1/` dokumentiert. Jede thematische Archivnotiz führt die gefundene öffentliche Quell-URL, die quellennah aufgenommene Aussage, Linkbefunde und den Erfassungsstatus. Die Website stellt diese Aufnahme anschließend im Bereich **Historie** öffentlich bereit. Nicht auffindbare Altseiten werden dort transparent als nicht öffentlich reproduzierbar gekennzeichnet; sie werden nicht mit vermuteten Inhalten ergänzt.
 
-Version 2 übernimmt und strukturiert die nachweisbar sichtbaren Inhalte zu ERP-Grundlagen, ERP-Modulen, Cloud-ERP, Autor, Portfolio-/Projektmanagement, SAP S/4HANA EPPM, Projektmanagement, SAP Activate, Enterprise Architecture, APIs, integrierten Prozessen, den fünf End-to-End-Prozessen, zentralen Konzepten, Datenbanken, künstlicher Intelligenz, KI-Ethik, Ressourcen, Blog-Hinweisen und Impressum.
+Die Informationsarchitektur ordnet ERP-Grundlagen, ERP-Module, Cloud-ERP, Autor, Portfolio-/Projektmanagement, SAP S/4HANA EPPM, Projektmanagement, SAP Activate, Enterprise Architecture, APIs, integrierte Prozesse, die fünf End-to-End-Prozesse, zentrale Konzepte, Datenbanken, künstliche Intelligenz, KI-Ethik, Ressourcen, Research Briefings, Blog-Hinweise und Impressum.
 
 ## Informationsarchitektur
 
@@ -19,7 +19,7 @@ Version 2 übernimmt und strukturiert die nachweisbar sichtbaren Inhalte zu ERP-
 - **Prozesse**: Prozessübersicht sowie einzelne Seiten zu Record-to-Report, Recruit-to-Retire, Source-to-Pay, Design-to-Operate und Lead-to-Cash.
 - **Transformation**: Portfolio & Projektmanagement, SAP S/4HANA EPPM, Projektmanagement, SAP Activate, Enterprise Architecture und APIs.
 - **KI & Ethik**: Künstliche Intelligenz, KI-Ethik sowie eine separate KI-Transparenzseite.
-- **Ressourcen**: Begriffsarbeit, ERP Terminology Trainer, Blog-Hinweise und kuratierte externe Verknüpfungen.
+- **Ressourcen**: Begriffsarbeit, ERP Terminology Trainer, ERP Research Briefings, Blog-Hinweise und kuratierte externe Verknüpfungen.
 - **Projekte**: Klar als Konzepte/Prototypen markierte Karten zu DP-09, DP-10, DP-12, Knowledge Management Hub und Ablauf-Werkbank; bis zu belastbaren Detailseiten führen alle auf `https://www.digitalpath.at/`.
 - **Über / Rechtliches**: Autorenprofil, Impressum, Historie (Version 1) und Quellenhinweise.
 
@@ -73,8 +73,12 @@ Jede indexierbare Seite erhält einen individuellen Titel, eine Beschreibung, ka
 
 ## KI-Transparenz
 
-Die separate Seite erläutert sachlich: Struktur, Gestaltung und technische Umsetzung dieser Version 2 wurden KI-unterstützt erstellt und vom verantwortlichen Herausgeber geprüft. Dieses Vorgehen wird eindeutig von den übernommenen, quellennahe dokumentierten Bestandsinhalten getrennt. Projektkarten deklarieren ihren jeweiligen Reifegrad zusätzlich direkt am Element.
+Die separate Seite erläutert sachlich: Struktur, Gestaltung und technische Umsetzung der Website wurden KI-unterstützt erstellt und vom verantwortlichen Herausgeber geprüft. Projektkarten deklarieren ihren jeweiligen Reifegrad direkt am Element.
 
 ## Materialgrenzen
 
 Es werden keine Aussagen über nicht belegte Projektfunktionen, Detail-URLs oder nicht auffindbare Altseiten erfunden. DP-09, DP-10, DP-12, Knowledge Management Hub und Ablauf-Werkbank bleiben als Konzept/Prototyp sichtbar und verlinken ausschließlich auf die verifizierte Einstiegsseite von Digitalpath. Die Implementierung verwendet keine Datenbank, keinen Server und keine Tracking- oder Werbenetzwerke.
+
+## Research Briefings
+
+Die zwei Research-Bereiche „ERP Brief“ und „ERP Postimplementierung“ sind als eigene, statusklare Ressourcenseite eingebunden. Ihre Pflege ist für einen angemeldeten Browserzugriff vorgesehen und verwendet keine externe Programmierschnittstelle oder Guthaben. Cookie-, Anmelde- und Fehlerseiten werden nicht als fachliche Inhalte verarbeitet. Erst nach einem erfolgreichen Zugriff auf die tatsächlichen Projektinhalte wird ein sinnvoller täglicher Pflegeablauf definiert.

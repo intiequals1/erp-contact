@@ -1,0 +1,29 @@
+# ERP.Contact
+
+> Deutschsprachige Wissenswebsite zu ERP, Geschäftsprozessen, Projektarbeit, Architektur sowie verantwortungsvoller künstlicher Intelligenz.
+
+Hinweis zur Erstellungsweise: Struktur, Gestaltung und Textentwürfe dieser Website wurden mit KI generiert und vom verantwortlichen Herausgeber geprüft. Die KI-Transparenzseite erläutert diese Arbeitsweise.
+
+## Einstieg
+
+- [ERP.Contact Einstieg](https://www.erp.contact/): Überblick über ERP, Prozesse und Verantwortung.
+- [ERP-Grundlagen](https://www.erp.contact/erp/grundlagen/): Integration, Konfigurierbarkeit und Informationsmanagement.
+- [ERP-Module](https://www.erp.contact/erp/module/): Funktionsbereiche vom Vertrieb bis zur Analyse.
+- [Cloud ERP](https://www.erp.contact/erp/cloud/): Plattformansätze, Betrieb und Governance.
+
+## Prozesse und Transformation
+
+- [End-to-End-Prozesse](https://www.erp.contact/prozesse/): Record-to-Report, Recruit-to-Retire, Source-to-Pay, Design-to-Operate und Lead-to-Cash.
+- [Transformation](https://www.erp.contact/transformation/): Portfolioarbeit, Projektmanagement, SAP Activate, Architektur und APIs.
+- [Research Briefings](https://www.erp.contact/ressourcen/research-briefings/): KI-offengelegte Themencluster zu ERP Brief und ERP Postimplementierung.
+
+## Verantwortung und Kontext
+
+- [KI und Ethik](https://www.erp.contact/ki/): Zweck, Daten, Kontrolle und Verantwortung bei KI-Unterstützung.
+- [KI-Transparenz](https://www.erp.contact/ki-transparenz/): KI-generierte Anteile und menschliche Prüfung.
+- [Ressourcen](https://www.erp.contact/ressourcen/): Begriffstrainer und vernetzte Arbeitskontexte.
+- [Historie](https://www.erp.contact/historie/): Getrennte, nicht indexierte historische Bestandsaufnahme.
+
+## Nutzungshinweis
+
+ERP.Contact ist eine Informationsseite. Fachliche Begriffe, Rollen und Systemgrenzen müssen im jeweiligen Organisations- und Implementierungskontext abgestimmt werden.

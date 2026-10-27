@@ -2,7 +2,7 @@
   "routes": [
     {
       "path": "/",
-      "title": "ERP.Contact — ERP, Prozesse und verantwortungsvolle KI"
+      "title": "ERP.Contact: ERP, Prozesse und verantwortungsvolle KI"
     },
     {
       "path": "/erp/grundlagen/",
@@ -86,15 +86,15 @@
     },
     {
       "path": "/ki-transparenz/",
-      "title": "KI-Transparenz — ERP.Contact"
+      "title": "KI-Transparenz bei ERP.Contact: Arbeitsweise"
     },
     {
       "path": "/ressourcen/",
       "title": "ERP-Ressourcen: Begriffe, Trainer und Werkstätten"
     },
     {
-      "path": "/ressourcen/perplexity-projekte/",
-      "title": "ERP Research Briefings: zwei Perplexity-Projekte"
+      "path": "/ressourcen/research-briefings/",
+      "title": "ERP Research Briefings: zwei KI-gestützte Arbeitsbereiche"
     },
     {
       "path": "/projekte/",
@@ -106,7 +106,7 @@
     },
     {
       "path": "/impressum/",
-      "title": "Impressum — ERP.Contact"
+      "title": "Impressum und Anbieterangaben für ERP.Contact"
     },
     {
       "path": "/historie/",

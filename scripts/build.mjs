@@ -1,7 +1,7 @@
 import { cp, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { dirname, join, resolve } from 'node:path';
 import { ARCHIVE, FOOTER_LINKS, NAV, PAGES, SITE } from '../src/content.mjs';
-import { PERPLEXITY_PROJECTS } from '../src/perplexity-projects.mjs';
+import { RESEARCH_BRIEFINGS } from '../src/research-briefings.mjs';
 
 const root = resolve(import.meta.dirname, '..');
 const dist = join(root, 'dist');
@@ -20,6 +20,52 @@ const outputPath = (path) => path === '/' ? join(dist, 'index.html') : join(dist
 const archiveSlug = (file) => file.replace(/\.md$/, '');
 const archiveHref = (file) => `/historie/archiv/${archiveSlug(file)}/`;
 const archiveDownloadHref = (file) => `/historie/archiv/downloads/${file}`;
+const aiDisclosure = 'Seitenstruktur und redaktionelle Textfassung wurden mit KI generiert und vom verantwortlichen Herausgeber geprüft.';
+
+function jsonLd(value) {
+  return JSON.stringify(value).replaceAll('<', '\\u003c').replaceAll('>', '\\u003e').replaceAll('&', '\\u0026');
+}
+
+function pageSchema(page, canonical) {
+  const topics = page.keywords.split(',').map((name) => ({ '@type': 'Thing', name: name.trim() }));
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebSite',
+        '@id': `${SITE.origin}/#website`,
+        url: SITE.origin,
+        name: SITE.name,
+        description: SITE.description,
+        inLanguage: 'de-DE'
+      },
+      {
+        '@type': 'Person',
+        '@id': `${SITE.origin}/#publisher`,
+        name: 'Claudiu Dangulea',
+        url: 'https://www.dangulea.at/'
+      },
+      {
+        '@type': 'WebPage',
+        '@id': `${canonical}#webpage`,
+        url: canonical,
+        name: page.title,
+        headline: page.title,
+        description: page.description,
+        inLanguage: 'de-DE',
+        isPartOf: { '@id': `${SITE.origin}/#website` },
+        about: topics,
+        keywords: page.keywords,
+        dateModified: SITE.updated,
+        author: { '@id': `${SITE.origin}/#publisher` },
+        reviewedBy: { '@id': `${SITE.origin}/#publisher` },
+        mainEntityOfPage: { '@id': `${canonical}#webpage` },
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.hero-content h1', '.hero-content .lead'] },
+        additionalProperty: { '@type': 'PropertyValue', name: 'KI-Offenlegung', value: aiDisclosure }
+      }
+    ]
+  };
+}
 
 function link(item, className = '') {
   const classes = className ? ` class="${className}"` : '';
@@ -76,12 +122,14 @@ function renderProjectGrid(block) {
   </section>`;
 }
 
-function renderPerplexityProjects(block) {
+function renderResearchBriefings(block) {
   return `<section class="content-section">
     <div class="section-heading"><p class="section-kicker">Recherchebereiche</p><h2>${block.heading}</h2></div>
-    <div class="research-grid">${PERPLEXITY_PROJECTS.map((project) => {
-      const timestamp = project.lastUpdated ? `Stand: ${project.lastUpdated}` : 'Noch keine autorisierte Inhaltsaktualisierung';
-      return `<article class="research-card"><p class="research-kind">${project.kind}</p><h3>${project.title}</h3><p>${project.summary}</p><div class="research-meta"><span>${project.updateStatus}</span><span>${timestamp}</span></div><a class="text-link" href="${project.url}" target="_blank" rel="noopener noreferrer">Projekt bei Perplexity öffnen <span aria-hidden="true">↗</span><span class="sr-only"> (öffnet in neuem Tab)</span></a></article>`;
+    <div class="research-grid">${RESEARCH_BRIEFINGS.map((project) => {
+      const statusItems = project.statusSteps.map((step) => `<li><span>${esc(step.label)}</span><strong>${esc(step.value)}</strong></li>`).join('');
+      const clusters = project.clusters.map((cluster) => `<li><a href="${esc(cluster.href)}"><span class="cluster-code">${esc(cluster.code)}</span><span class="cluster-label">${esc(cluster.label)}</span><strong>${esc(cluster.title)}</strong><span class="cluster-text">${esc(cluster.text)}</span><span class="cluster-arrow" aria-hidden="true">→</span></a></li>`).join('');
+      const references = project.references.map((reference) => `<li><a href="${esc(reference.href)}"><strong>${esc(reference.label)}</strong><span>${esc(reference.context)}</span></a></li>`).join('');
+      return `<article class="research-card"><header class="research-card-header"><p class="research-kind"><span class="research-node" aria-hidden="true"></span>${esc(project.kind)}</p><p class="research-stage">${esc(project.stage)}</p></header><h3>${esc(project.title)}</h3><p class="research-summary">${esc(project.summary)}</p><section class="research-status" aria-labelledby="${esc(project.id)}-status"><div><p class="research-label" id="${esc(project.id)}-status">Arbeitsstand</p><p class="research-timestamp">${esc(project.lastUpdated)}</p></div><ul>${statusItems}</ul></section><section class="research-cluster-block" aria-labelledby="${esc(project.id)}-clusters"><div class="research-block-heading"><p class="research-label" id="${esc(project.id)}-clusters">Themencluster</p><span>4 Perspektiven</span></div><ul class="research-clusters">${clusters}</ul></section><section class="research-reference-block" aria-labelledby="${esc(project.id)}-references"><p class="research-label" id="${esc(project.id)}-references">Weiterführende Verweise</p><ul>${references}</ul></section><aside class="research-disclosure"><span aria-hidden="true">KI</span><p>${esc(project.disclosure)}</p></aside></article>`;
     }).join('')}</div>
   </section>`;
 }
@@ -185,7 +233,7 @@ function renderBlock(block) {
   if (block.type === 'note') return renderNote(block);
   if (block.type === 'links') return renderLinks(block);
   if (block.type === 'project-grid') return renderProjectGrid(block);
-  if (block.type === 'perplexity-projects') return renderPerplexityProjects(block);
+  if (block.type === 'research-briefings') return renderResearchBriefings(block);
   if (block.type === 'history-grid') return renderHistoryGrid();
   return '';
 }
@@ -198,6 +246,7 @@ function renderRelated(page) {
 function renderDocument(page) {
   const canonicalPath = routePath(page.path);
   const canonical = `${SITE.origin}${canonicalPath}`;
+  const structuredData = jsonLd(pageSchema(page, canonical));
   const currentPath = canonicalPath;
   const nav = NAV.map((item) => {
     const isCurrent = routePath(item.href.replace(/\/$/, '') || '/') === currentPath;
@@ -214,20 +263,26 @@ function renderDocument(page) {
   <meta name="description" content="${esc(page.description)}">
   <meta name="keywords" content="${esc(page.keywords)}">
   <meta name="author" content="Claudiu Dangulea">
+  <meta name="generator" content="KI-generierte Seitenstruktur und Textfassung, menschlich geprüft">
+  <meta name="ai-generated" content="true">
+  <meta name="content-provenance" content="${esc(aiDisclosure)}">
   <meta name="robots" content="${page.noindex ? 'noindex,follow' : 'index,follow'}">
   <link rel="canonical" href="${canonical}">
+  <link rel="describedby" type="text/markdown" href="/llms.txt">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="ERP.Contact">
   <meta property="og:title" content="${esc(page.metaTitle)}">
   <meta property="og:description" content="${esc(page.description)}">
   <meta property="og:url" content="${canonical}">
   <meta property="og:image" content="${SITE.ogImage}">
+  <meta property="og:locale" content="de_DE">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${esc(page.metaTitle)}">
   <meta name="twitter:description" content="${esc(page.description)}">
   <meta name="twitter:image" content="${SITE.ogImage}">
   <meta name="theme-color" content="#0b716f">
   <link rel="icon" href="/assets/erp-contact-mark.svg" type="image/svg+xml">
+  <script type="application/ld+json">${structuredData}</script>
   <script>document.documentElement.classList.add('js')</script>
   <link rel="stylesheet" href="/assets/site.css">
 </head>
@@ -271,7 +326,7 @@ async function main() {
   for (const page of PAGES) await writeOutput(outputPath(page.path), renderDocument(page));
   for (const page of archivePages) await writeOutput(outputPath(page.path), renderDocument(page));
 
-  const notFound = { path: '/404', section: 'Nicht gefunden', title: 'Diese Seite wurde nicht gefunden.', metaTitle: 'Seite nicht gefunden — ERP.Contact', description: 'Die aufgerufene Seite ist nicht verfügbar.', keywords: '404, ERP.Contact', eyebrow: '404', lead: 'Bitte nutzen Sie die Navigation oder kehren Sie zur Startseite zurück.', blocks: [{ type: 'links', heading: 'Weiter', items: [{ label: 'Zur Startseite', href: '/', text: 'ERP.Contact öffnen' }, { label: 'Zur Historie', href: '/historie/', text: 'Quellaufnahme ansehen' }] }], related: [] };
+  const notFound = { path: '/404', section: 'Nicht gefunden', title: 'Diese Seite wurde nicht gefunden.', metaTitle: 'Seite nicht gefunden: ERP.Contact', description: 'Die aufgerufene Seite ist nicht verfügbar.', keywords: '404, ERP.Contact', eyebrow: '404', lead: 'Bitte nutzen Sie die Navigation oder kehren Sie zur Startseite zurück.', blocks: [{ type: 'links', heading: 'Weiter', items: [{ label: 'Zur Startseite', href: '/', text: 'ERP.Contact öffnen' }, { label: 'Zur Historie', href: '/historie/', text: 'Quellaufnahme ansehen' }] }], related: [] };
   await writeOutput(join(dist, '404.html'), renderDocument(notFound));
 
   const routes = { routes: [...PAGES, ...archivePages].map((page) => ({ path: routePath(page.path), title: page.metaTitle })) };
