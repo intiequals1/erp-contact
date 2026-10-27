@@ -46,4 +46,4 @@ Vor einer öffentlichen Veröffentlichung muss der verantwortliche Betreiber die
 
 ## Repository und Veröffentlichung
 
-Das kanonische private Repository ist `intiequals1/erp-contact`. Die Website ist nicht veröffentlicht. Ein Push nach `main` aktualisiert nur den Repository-Stand; eine Veröffentlichung erfordert einen separaten, ausdrücklich bestätigten Plattformschritt.
+Das kanonische Repository ist `intiequals1/erp-contact`. Der Workflow `.github/workflows/deploy-pages.yml` prüft und baut die Website bei jedem Push nach `main` und stellt anschließend den Inhalt von `dist/` über GitHub Pages bereit. Die konfigurierte Produktionsdomain ist `https://erp.contact/`; der CNAME in der Repository-Wurzel dokumentiert diese Zuordnung. Die Repository-Sichtbarkeit wird unabhängig von der Website-Auslieferung in GitHub verwaltet.
