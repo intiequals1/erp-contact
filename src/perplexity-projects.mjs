@@ -4,17 +4,17 @@ export const PERPLEXITY_PROJECTS = [
     title: 'ERP Brief',
     url: 'https://www.perplexity.ai/projects/erp-brief-ZJfvmnnMT1qTrbUOV6cA8Q',
     kind: 'Perplexity-Rechercheprojekt',
-    updateStatus: 'Autorisierter Quellenzugriff erforderlich',
+    updateStatus: 'Authentifizierter Browserzugriff erforderlich',
     lastUpdated: 'Öffentlicher Zugriff geprüft: 27.10.2026',
-    summary: 'Der Projektinhalt war beim öffentlichen Abruf nicht lesbar; Perplexity zeigte nur den Cookie-Hinweis. Sobald ein autorisierter Zugriff verfügbar ist, wird hier eine quellennahe Tageszusammenfassung mit Zeitstempel ergänzt.'
+    summary: 'Der Projektinhalt ist ohne Anmeldung nicht lesbar; Perplexity zeigte einen Cookie-Hinweis. Die Pflege erfolgt über einen angemeldeten Browserzugriff, ohne Perplexity-API und ohne API-Guthaben.'
   },
   {
     id: 'erp-postimplementierung',
     title: 'ERP Postimplementierung',
     url: 'https://www.perplexity.ai/projects/erp-postimplementierung-aUI0.a1XT5y1uEspEdODbA',
     kind: 'Perplexity-Rechercheprojekt',
-    updateStatus: 'Autorisierter Quellenzugriff erforderlich',
+    updateStatus: 'Authentifizierter Browserzugriff erforderlich',
     lastUpdated: 'Öffentlicher Zugriff geprüft: 27.10.2026',
-    summary: 'Der Projektinhalt war beim öffentlichen Abruf nicht lesbar; Perplexity zeigte eine Anmeldeseite. Sobald ein autorisierter Zugriff verfügbar ist, wird hier eine quellennahe Tageszusammenfassung mit Zeitstempel ergänzt.'
+    summary: 'Der Projektinhalt ist ohne Anmeldung nicht lesbar; Perplexity zeigte eine Anmeldeseite. Die Pflege erfolgt über einen angemeldeten Browserzugriff, ohne Perplexity-API und ohne API-Guthaben.'
   }
 ];

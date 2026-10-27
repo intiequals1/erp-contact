@@ -441,9 +441,9 @@ export const PAGES = [
     keywords: 'ERP Brief, ERP Postimplementierung, Perplexity, ERP Recherche, Research Briefing', eyebrow: 'Ressourcen · Research Briefings',
     lead: 'Zwei Recherchebereiche bündeln aktuelle Fragestellungen zu ERP und Postimplementierung. Status, Quellenzugriff und Zeitstempel bleiben sichtbar.',
     blocks: [
-      { type: 'prose', heading: 'Recherche als fortlaufender Arbeitsstand', paragraphs: ['ERP Research Briefings verbinden aktuelle Recherche mit einer klaren Einordnung in die Wissensbasis. Jeder Bereich bleibt direkt mit seinem Projekt verknüpft und erhält einen sichtbaren Aktualisierungsstatus.', 'Die tägliche Aktualisierung ergänzt nur Inhalte, die aus einem autorisierten Zugriff nachvollziehbar gelesen werden können. Ohne Zugriff werden keine Zusammenfassungen erfunden oder aus Anmeldeseiten abgeleitet.'] },
+      { type: 'prose', heading: 'Recherche als fortlaufender Arbeitsstand', paragraphs: ['ERP Research Briefings verbinden aktuelle Recherche mit einer klaren Einordnung in die Wissensbasis. Jeder Bereich bleibt direkt mit seinem Projekt verknüpft und erhält einen sichtbaren Aktualisierungsstatus.', 'Die Pflege erfolgt über einen angemeldeten Browserzugriff und benötigt weder Perplexity-API noch API-Guthaben. Ohne lesbaren Projektinhalt werden keine Zusammenfassungen erfunden oder aus Cookie- und Anmeldeseiten abgeleitet.'] },
       { type: 'perplexity-projects', heading: 'Zwei vernetzte Recherchebereiche' },
-      { type: 'note', tone: 'teal', title: 'Aktualisierungsprinzip', text: 'Jede Aktualisierung nennt ihren Stand. Projektinhalte bleiben von Linkstatus, Zugriffsvoraussetzungen und redaktioneller Einordnung unterscheidbar.' }
+      { type: 'note', tone: 'teal', title: 'Aktualisierungsprinzip', text: 'Jede Aktualisierung nennt ihren Stand. Projektinhalte bleiben von Linkstatus, Zugriffsvoraussetzungen und redaktioneller Einordnung unterscheidbar; eine API-Nutzung ist nicht vorgesehen.' }
     ], related: [internal('Ressourcen', '/ressourcen/', 'Zur Ressourcenübersicht'), internal('Projekte', '/projekte/', 'Konzepte und Prototypen')]
   },
   {
