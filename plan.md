@@ -69,7 +69,7 @@ Ein Node-basierter Build ohne fremde Laufzeitabhängigkeiten erzeugt `dist/`. Di
 
 ## Suchmaschinen- und Zugänglichkeitsstandard
 
-Jede indexierbare Seite erhält einen individuellen Titel, eine Beschreibung, kanonische `https://www.erp.contact/`-Adresse, Open-Graph-Daten und bedeutungsvollen initialen HTML-Inhalt. Die Seite nutzt semantische Überschriften, Skip-Link, sichtbare Fokuszustände, ausreichende Kontraste, beschreibende Links und responsive Zeilenlängen. Der öffentliche Verlauf und die KI-Transparenzseite sind über die Haupt- und Fußnavigation erreichbar.
+Jede indexierbare Seite erhält einen individuellen Titel, eine Beschreibung, kanonische `https://erp.contact/`-Adresse, Open-Graph-Daten und bedeutungsvollen initialen HTML-Inhalt. Die Seite nutzt semantische Überschriften, Skip-Link, sichtbare Fokuszustände, ausreichende Kontraste, beschreibende Links und responsive Zeilenlängen. Der öffentliche Verlauf und die KI-Transparenzseite sind über die Haupt- und Fußnavigation erreichbar.
 
 ## KI-Transparenz
 

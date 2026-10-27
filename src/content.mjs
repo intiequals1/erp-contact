@@ -1,9 +1,9 @@
 export const SITE = {
   name: 'ERP.Contact',
   wordmark: 'erp.contact',
-  origin: 'https://www.erp.contact',
+  origin: 'https://erp.contact',
   description: 'ERP-Wissen, Geschäftsprozesse, Projektarbeit und verantwortungsvolle KI in einer vernetzten, verständlichen Wissensbasis.',
-  ogImage: 'https://www.erp.contact/assets/og-erp-contact.svg',
+  ogImage: 'https://erp.contact/assets/og-erp-contact.svg',
   updated: '2026-10-27'
 };
 
