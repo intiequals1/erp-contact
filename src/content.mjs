@@ -46,7 +46,7 @@ export const ARCHIVE = [
 export const PAGES = [
   {
     path: '/', section: 'Einstieg', title: 'ERP verstehen. Prozesse verbinden. Verantwortung klären.',
-    metaTitle: 'ERP.Contact — ERP, Prozesse und verantwortungsvolle KI',
+    metaTitle: 'ERP.Contact: ERP, Prozesse und verantwortungsvolle KI',
     description: 'ERP.Contact verbindet Grundlagen, End-to-End-Prozesse, Projektarbeit, Architektur und verantwortungsvolle KI in einer zugänglichen Wissensbasis.',
     keywords: 'ERP, Geschäftsprozesse, Projektmanagement, SAP, künstliche Intelligenz',
     eyebrow: 'Wissensbasis für Unternehmenssysteme',
@@ -61,7 +61,7 @@ export const PAGES = [
         { number: '02', title: 'Prozesse lesen', text: 'Fünf End-to-End-Prozesse und ihre fachübergreifenden Übergaben.', href: '/prozesse/' },
         { number: '03', title: 'Verantwortung einordnen', text: 'Projektarbeit, Architektur, APIs sowie KI und Ethik.', href: '/ki/' }
       ]},
-      { type: 'process', heading: 'Ein System in Bewegung', intro: 'ERP verbindet diese Perspektiven. Die Darstellung ist eine Orientierung — konkrete Rollen, Begriffe und Systemgrenzen werden im jeweiligen Vorhaben abgestimmt.', items: [
+      { type: 'process', heading: 'Ein System in Bewegung', intro: 'ERP bringt diese Perspektiven zusammen. In der Praxis müssen Rollen, Begriffe und Systemgrenzen immer gemeinsam abgestimmt werden.', items: [
         { number: 'A', title: 'Daten', text: 'Stammdaten und Transaktionen schaffen einen gemeinsamen Bezug für Fachbereiche.' },
         { number: 'B', title: 'Prozesse', text: 'Planung, Beschaffung, Leistungserbringung und Abschluss greifen ineinander.' },
         { number: 'C', title: 'Entscheidungen', text: 'Informationen werden erst dann wirksam, wenn Zuständigkeit und Kontext sichtbar bleiben.' }
@@ -96,7 +96,7 @@ export const PAGES = [
   },
   {
     path: '/erp/module', section: 'ERP verstehen', title: 'ERP-Module: Funktionen entlang des Unternehmens',
-    metaTitle: 'ERP-Module: Funktionen im Unternehmenskontext', description: 'Überblick über ERP-Module — von Vertrieb und Beschaffung bis Business Intelligence und E-Commerce.',
+    metaTitle: 'ERP-Module: Funktionen im Unternehmenskontext', description: 'Überblick über ERP-Module von Vertrieb und Beschaffung bis Business Intelligence und E-Commerce.',
     keywords: 'ERP Module, Vertrieb, Beschaffung, Produktion, Buchhaltung, Business Intelligence', eyebrow: 'ERP verstehen · 02',
     lead: 'Module machen fachliche Zuständigkeiten sichtbar. Ihr Wert entsteht jedoch erst in den Übergaben zwischen ihnen.',
     blocks: [
@@ -133,9 +133,9 @@ export const PAGES = [
     path: '/erp/konzepte', section: 'ERP verstehen', title: 'Zentrale Konzepte: Struktur, Stammdaten, Dokumente',
     metaTitle: 'ERP-Konzepte: Struktur, Stamm- und Bewegungsdaten', description: 'Unternehmensstruktur, Customizing, Stamm- und Bewegungsdaten als zentrale Konzepte für ERP-Prozesse.',
     keywords: 'ERP Konzepte, Unternehmensstruktur, Customizing, Stammdaten, Bewegungsdaten', eyebrow: 'ERP verstehen · 04',
-    lead: 'Gemeinsame Daten brauchen gemeinsame Strukturen — und klare Unterscheidungen zwischen Konfiguration und Tagesgeschäft.',
+    lead: 'Gemeinsame Daten brauchen gemeinsame Strukturen. Ebenso wichtig ist die klare Trennung zwischen Konfiguration und Tagesgeschäft.',
     blocks: [
-      { type: 'prose', heading: 'Unternehmensstruktur und Customizing', paragraphs: ['ERP trennt Anwendungen für tägliche Abläufe von der Konfiguration der Geschäftsprozesse und Unternehmensstruktur. Dieses Customizing schafft den Rahmen, in dem tägliche Vorgänge verarbeitet werden.', 'Für die praktische Arbeit bedeutet das: Eine fachliche Frage kann sich auf die operativen Daten beziehen — oder auf die zugrunde liegende Struktur und Regel. Beide Ebenen sollten nicht verwechselt werden.'] },
+      { type: 'prose', heading: 'Unternehmensstruktur und Customizing', paragraphs: ['ERP trennt Anwendungen für tägliche Abläufe von der Konfiguration der Geschäftsprozesse und Unternehmensstruktur. Dieses Customizing schafft den Rahmen, in dem tägliche Vorgänge verarbeitet werden.', 'In der Praxis hilft eine einfache Unterscheidung. Eine Frage kann sich auf operative Daten beziehen oder auf die zugrunde liegende Struktur und Regel. Beides sollte nicht vermischt werden.'] },
       { type: 'feature-grid', heading: 'Drei Datenperspektiven', items: [
         { number: '01', title: 'Struktur', text: 'Organisationseinheiten und Zuordnungen geben Daten und Vorgängen einen Kontext.' },
         { number: '02', title: 'Stammdaten', text: 'Relativ stabile Informationen wie Materialien, Kunden, Lieferanten, Konten, Kostenstellen oder Mitarbeitende.' },
@@ -178,7 +178,7 @@ export const PAGES = [
   },
   {
     path: '/prozesse/record-to-report', section: 'Prozesse', title: 'Record-to-Report: Finanzinformationen nachvollziehbar führen',
-    metaTitle: 'Record-to-Report: Finanzprozesse im ERP', description: 'Acht Schritte von Record-to-Report — von Transaktionserfassung bis kontinuierlicher Verbesserung.',
+    metaTitle: 'Record-to-Report: Finanzprozesse im ERP', description: 'Acht Schritte von Record-to-Report von der Transaktionserfassung bis zur kontinuierlichen Verbesserung.',
     keywords: 'Record-to-Report, R2R, Finanzabschluss, Hauptbuch, IFRS', eyebrow: 'Prozesse · R2R',
     lead: 'Record-to-Report verbindet Beleg, Buchung, Abstimmung, Abschluss, Bericht und Verbesserung.',
     blocks: [
@@ -201,7 +201,7 @@ export const PAGES = [
   },
   {
     path: '/prozesse/recruit-to-retire', section: 'Prozesse', title: 'Recruit-to-Retire: Den Beschäftigtenlebenszyklus verbinden',
-    metaTitle: 'Recruit-to-Retire: HR-Prozess im ERP-Kontext', description: 'Sieben Phasen von Recruit-to-Retire — Rekrutierung, Auswahl, Onboarding und Offboarding.',
+    metaTitle: 'Recruit-to-Retire: HR-Prozess im ERP-Kontext', description: 'Sieben Phasen von Recruit-to-Retire von Rekrutierung und Auswahl bis Onboarding und Offboarding.',
     keywords: 'Recruit-to-Retire, HR Prozess, Onboarding, Talententwicklung, Offboarding', eyebrow: 'Prozesse · R2R',
     lead: 'Recruit-to-Retire beschreibt den Bogen vom ersten Kontakt mit Kandidatinnen und Kandidaten bis zum geordneten Austritt.',
     blocks: [
@@ -317,7 +317,7 @@ export const PAGES = [
     blocks: [
       { type: 'prose', heading: 'Methoden im Projektkontext', paragraphs: ['Projektmanagement verbindet PMBOK, ISO-Standards, PRINCE2, Business-Continuity-Bezüge, agile Methoden und SAP Activate. Dazu gehören Projektauftrag und Stakeholderidentifikation, Projektziele und Umfang, Project Brief und PID, Vision und Roadmap sowie User Stories und Backlogs.', 'Die Seite wird hier nicht zu einem Methodenvergleich erweitert. Sie zeigt vielmehr, dass ERP-Projekte unterschiedliche Denkweisen verbinden müssen: klassische Steuerung, fachliche Anforderungen, iterative Arbeit und standardisierte Implementierungsrahmen.'] },
       { type: 'feature-grid', heading: 'Wiederkehrende Klärungen', items: [
-        { number: 'Z', title: 'Ziel & Umfang', text: 'Was soll erreicht werden — und welche Grenzen gelten?' },
+        { number: 'Z', title: 'Ziel & Umfang', text: 'Was soll erreicht werden? Welche Grenzen gelten?' },
         { number: 'S', title: 'Stakeholder', text: 'Wer ist betroffen, wer entscheidet und wer benötigt Informationen?' },
         { number: 'A', title: 'Arbeitspakete', text: 'Wie werden Anforderungen, Aufgaben, Abhängigkeiten und Fortschritt sichtbar?' },
         { number: 'L', title: 'Lernen', text: 'Wie werden Erkenntnisse, Risiken und Anpassungen zurück in die Steuerung geführt?' }
@@ -368,7 +368,7 @@ export const PAGES = [
         { number: 'C', title: 'Create', text: 'Neue Daten oder Ressourcen anlegen.' },
         { number: 'R', title: 'Read', text: 'Bestehende Daten oder Ressourcen lesen.' },
         { number: 'U', title: 'Update', text: 'Bestehende Daten oder Ressourcen aktualisieren.' },
-        { number: 'D', title: 'Delete', text: 'Daten oder Ressourcen löschen — nur mit klarer Berechtigung und Verantwortung.' }
+        { number: 'D', title: 'Delete', text: 'Daten oder Ressourcen löschen. Dafür braucht es klare Berechtigung und Verantwortung.' }
       ]},
       { type: 'note', tone: 'teal', title: 'Integrationsfragen', text: 'Vor einer Schnittstelle sollten Bedeutung, Eigentümerschaft, Berechtigungen, Datenqualität, Fehlerbehandlung und Änderungsfolgen geklärt sein. Technische Erreichbarkeit allein ist keine fachliche Integration.' }
     ], related: [internal('Datenbanken', '/erp/datenbanken/', 'Datenhaltung einordnen'), internal('Enterprise Architecture', '/transformation/enterprise-architecture/', 'Systemgrenzen und Anforderungen')]
@@ -381,7 +381,7 @@ export const PAGES = [
     blocks: [
       { type: 'prose', heading: 'KI im Unternehmenskontext', paragraphs: ['Künstliche Intelligenz kann Muster erkennen, Informationen strukturieren und wiederkehrende Tätigkeiten unterstützen. In Unternehmensprozessen entsteht ihr Nutzen jedoch nur im Zusammenspiel mit verlässlichen Daten, klaren Zielen und verantwortlichen Menschen.', 'Dieser Bereich ordnet Fragen ein, die bei KI-Unterstützung in Unternehmensprozessen relevant sind: Zweck, Daten, Kontrolle und Verantwortung.'] },
       { type: 'feature-grid', heading: 'Vier Fragen vor dem Einsatz', items: [
-        { number: '01', title: 'Zweck', text: 'Welche Entscheidung oder Tätigkeit soll unterstützt werden — und warum?' },
+        { number: '01', title: 'Zweck', text: 'Welche Entscheidung oder Tätigkeit soll unterstützt werden? Warum ist das sinnvoll?' },
         { number: '02', title: 'Daten', text: 'Welche Daten fließen ein, welche Qualität und welche Grenzen haben sie?' },
         { number: '03', title: 'Kontrolle', text: 'Wer prüft Ergebnisse, Ausnahmen und unerwartete Folgen?' },
         { number: '04', title: 'Verantwortung', text: 'Wer trägt die Entscheidung und kann sie begründen?' }
@@ -407,9 +407,9 @@ export const PAGES = [
   },
   {
     path: '/ki-transparenz', section: 'KI & Ethik', title: 'KI-Transparenz für ERP.Contact',
-    metaTitle: 'KI-Transparenz — ERP.Contact', description: 'Transparenzhinweis zu KI-unterstützter Struktur, Gestaltung und technischer Umsetzung von ERP.Contact.',
+    metaTitle: 'KI-Transparenz bei ERP.Contact: Arbeitsweise', description: 'Transparenzhinweis zu KI-unterstützter Struktur, Gestaltung, Textfassung und technischer Umsetzung von ERP.Contact.',
     keywords: 'KI Transparenz, ERP.Contact, Webdesign, technische Umsetzung, Quellen', eyebrow: 'Transparenz',
-    lead: 'Transparenz bedeutet, die Rolle von KI sichtbar zu machen — und die Verantwortung nicht zu delegieren.',
+    lead: 'Transparenz heißt, die Rolle von KI sichtbar zu machen. Verantwortung bleibt immer bei den Menschen, die Inhalte veröffentlichen und Entscheidungen treffen.',
     blocks: [
       { type: 'prose', heading: 'Was KI unterstützt hat', paragraphs: ['Struktur, Design und technische Umsetzung von ERP.Contact wurden KI-unterstützt erstellt. Dazu zählen die Informationsarchitektur, der statische Seitenaufbau und die redaktionelle Ausformulierung der Texte.', 'Der verantwortliche Herausgeber prüft die Ergebnisse vor Veröffentlichung. KI-Unterstützung ersetzt weder die fachliche Verantwortung noch die Pflicht, unpassende, unklare oder unzutreffende Inhalte zu korrigieren.'] },
       { type: 'prose', heading: 'Prüfung und Verantwortlichkeit', paragraphs: ['KI-Unterstützung ersetzt weder fachliche Prüfung noch redaktionelle Verantwortung. Aussagen zu Begriffen, Prozessen und Ressourcen werden vor Veröffentlichung auf Kontext, Verständlichkeit und technische Umsetzbarkeit geprüft.', 'Externe Verweise werden mit ihrem erkennbaren Zweck verlinkt. Inhalte, die fortlaufend aktualisiert werden, erhalten einen Status und Zeitstempel statt einer stillschweigenden Aktualitätsannahme.'] },
@@ -423,7 +423,7 @@ export const PAGES = [
     lead: 'Gute Ressourcen zeigen ihren Zweck. Sie verlinken direkt, benennen ihren Reifegrad und verstecken keine Weiterleitungen.',
     blocks: [
       { type: 'links', heading: 'Geprüfte Einstiegspunkte', items: [
-        external('ERP Terminology Trainer', 'https://trainer.erp.contact/', 'Ein systemübergreifender Begriffstrainer für SAP, Dynamics 365, Odoo und generische ERP-Konzepte — mit Rollenperspektiven und Vergleichsfunktion.'),
+        external('ERP Terminology Trainer', 'https://trainer.erp.contact/', 'Ein systemübergreifender Begriffstrainer für SAP, Dynamics 365, Odoo und generische ERP-Konzepte. Er bietet Rollenperspektiven und Vergleichsmöglichkeiten.'),
         internal('ERP Research Briefings', '/ressourcen/research-briefings/', 'Zwei KI-gestützte Research-Bereiche für ERP-Briefing und Postimplementierung.'),
         external('Dangulea.at', 'https://www.dangulea.at/', 'Persönlicher Arbeits- und Projektkontext des Herausgebers.'),
         external('Digitalpath', 'https://www.digitalpath.at/', 'Unabhängiges Projektlabor für Konzepte, Prototypen und nachvollziehbare Reifegrade.'),
@@ -448,14 +448,14 @@ export const PAGES = [
   },
   {
     path: '/projekte', section: 'Projekte', title: 'Projekte: Konzepte und Prototypen transparent einordnen',
-    metaTitle: 'ERP-nahe Konzepte und Prototypen', description: 'Projektkarten zu ERP, Wissen, Fulfillment und Abläufen — klar als Konzepte oder Prototypen ausgewiesen und mit Digitalpath vernetzt.',
+    metaTitle: 'ERP-nahe Konzepte und Prototypen', description: 'Projektkarten zu ERP, Wissen, Fulfillment und Abläufen. Sie sind klar als Konzepte oder Prototypen ausgewiesen und mit Digitalpath vernetzt.',
     keywords: 'ERP Prototypen, DP-09, DP-10, DP-12, Knowledge Management, Digitalpath', eyebrow: 'Projektvernetzung',
     lead: 'Ein Konzept ist kein validiertes Ergebnis. Reifegrad, offene Fragen und der Verweis auf den aktuellen Projektkontext bleiben sichtbar.',
     blocks: [
       { type: 'project-grid', heading: 'Vernetzte Vorhaben', items: [
-        { code: 'DP—09', title: 'ERP · Prozessabgleich', status: 'Konzept / Prototyp', text: 'Vorhaben zum Abgleich von Rechnungen und Bestellungen im ERP-Kontext. Logik, Voraussetzungen und Grenzen werden erst in belastbarer Detaildokumentation konkretisiert.' },
-        { code: 'DP—10', title: 'Unternehmenssoftware', status: 'Konzept / Experimentierfeld', text: 'Arbeitsfeld für Geschäftsprozesse, Datenverarbeitung und Unternehmenssoftware. Konzept und technische Umsetzung bleiben getrennt ausgewiesen.' },
-        { code: 'DP—12', title: 'Mikro-Fulfillment · Teilhabe', status: 'Konzeptskizze', text: 'Ein Ansatz zu automatisiertem Mikro-Fulfillment und inklusiver Gestaltung von Arbeitsschritten; Machbarkeit, Recht, Wirtschaftlichkeit und Trägerschaft bleiben offen.' },
+        { code: 'DP-09', title: 'ERP · Prozessabgleich', status: 'Konzept / Prototyp', text: 'Vorhaben zum Abgleich von Rechnungen und Bestellungen im ERP-Kontext. Logik, Voraussetzungen und Grenzen werden erst in belastbarer Detaildokumentation konkretisiert.' },
+        { code: 'DP-10', title: 'Unternehmenssoftware', status: 'Konzept / Experimentierfeld', text: 'Arbeitsfeld für Geschäftsprozesse, Datenverarbeitung und Unternehmenssoftware. Konzept und technische Umsetzung bleiben getrennt ausgewiesen.' },
+        { code: 'DP-12', title: 'Mikro-Fulfillment · Teilhabe', status: 'Konzeptskizze', text: 'Ein Ansatz zu automatisiertem Mikro-Fulfillment und inklusiver Gestaltung von Arbeitsschritten. Machbarkeit, Recht, Wirtschaftlichkeit und Trägerschaft bleiben offen.' },
         { code: 'KMH', title: 'Knowledge Management Hub', status: 'Konzept', text: 'Ein Arbeitsstrang für Zugang zu Wissen und organisatorisches Wissensmanagement, ohne Funktionen vorwegzunehmen.' },
         { code: 'AW', title: 'Ablauf-Werkbank', status: 'Konzept / Prototyp', text: 'Ein Raum, um Abläufe mit Beispieldaten sichtbar zu machen und Grenzen von Technik, Automatisierung und menschlicher Entscheidung zu prüfen.' }
       ]},
@@ -480,16 +480,16 @@ export const PAGES = [
     ], related: [internal('Impressum', '/impressum/', 'Angaben zum Diensteanbieter'), internal('KI-Transparenz', '/ki-transparenz/', 'Transparenz über KI-Unterstützung')]
   },
   {
-    path: '/impressum', section: 'Rechtliches', title: 'Impressum', metaTitle: 'Impressum — ERP.Contact',
-    description: 'Impressumsangaben für ERP.Contact.', keywords: 'Impressum, ERP.Contact, Claudiu Dangulea, Medieninhaber, Österreich', eyebrow: 'Rechtliches',
+    path: '/impressum', section: 'Rechtliches', title: 'Impressum', metaTitle: 'Impressum und Anbieterangaben für ERP.Contact',
+    description: 'Impressumsangaben, Kontaktwege und rechtliche Hinweise für ERP.Contact und den verantwortlichen Diensteanbieter.', keywords: 'Impressum, ERP.Contact, Claudiu Dangulea, Medieninhaber, Österreich', eyebrow: 'Rechtliches',
     lead: 'Angaben zum Diensteanbieter und Medieninhaber.',
     blocks: [
       { type: 'prose', heading: 'Diensteanbieter / Medieninhaber', paragraphs: ['Claudiu Dangulea', 'Karl-Popper-Straße 5/217<br>1100 Wien<br>Österreich'] },
       { type: 'feature-grid', heading: 'Kontakt und Angaben', items: [
         { number: 'E', title: 'E-Mail', text: '<a href="mailto:claudiu.dangulea@gmail.com">claudiu.dangulea@gmail.com</a>' },
         { number: 'T', title: 'Telefon', text: '<a href="tel:+436763013307">+43 676 30 133 07</a>' },
-        { number: 'G1', title: 'GISA', text: '35190172 — Dienstleistungen in der automatischen Datenverarbeitung und Informationstechnik.' },
-        { number: 'G2', title: 'GISA', text: '38180019 — Erstellung pädagogischer Konzepte für Internetplattformen, Unterrichtsmaterialien sowie Ausstattungen von Unterrichtsräumen unter Ausschluss baulicher Aspekte.' }
+        { number: 'G1', title: 'GISA', text: '35190172: Dienstleistungen in der automatischen Datenverarbeitung und Informationstechnik.' },
+        { number: 'G2', title: 'GISA', text: '38180019: Erstellung pädagogischer Konzepte für Internetplattformen, Unterrichtsmaterialien sowie Ausstattungen von Unterrichtsräumen unter Ausschluss baulicher Aspekte.' }
       ]},
       { type: 'prose', heading: 'Weitere Angaben', paragraphs: ['Nicht im Firmenbuch eingetragen.<br><br><strong>Verantwortlich für den Inhalt gemäß § 25 MedienG:</strong><br>Claudiu Dangulea, Anschrift wie oben.<br><br><strong>Blattlinie:</strong><br>Information über Person, Projekte und Leistungen.', 'Der Geltungsbereich umfasst dangulea.at sowie alle von Claudiu Dangulea betriebenen Webauftritte.'] },
       { type: 'note', tone: 'sand', title: 'Historischer Hinweis', text: 'Die EU-OS/ODR-Plattform wurde am 20.07.2025 eingestellt. Sie wird deshalb nicht als aktuelle Rechtsinformation ausgegeben. Hinweise auf frühere Angaben sind ausschließlich im separaten Archivbereich dokumentiert.' }

@@ -20,6 +20,52 @@ const outputPath = (path) => path === '/' ? join(dist, 'index.html') : join(dist
 const archiveSlug = (file) => file.replace(/\.md$/, '');
 const archiveHref = (file) => `/historie/archiv/${archiveSlug(file)}/`;
 const archiveDownloadHref = (file) => `/historie/archiv/downloads/${file}`;
+const aiDisclosure = 'Seitenstruktur und redaktionelle Textfassung wurden mit KI generiert und vom verantwortlichen Herausgeber geprüft.';
+
+function jsonLd(value) {
+  return JSON.stringify(value).replaceAll('<', '\\u003c').replaceAll('>', '\\u003e').replaceAll('&', '\\u0026');
+}
+
+function pageSchema(page, canonical) {
+  const topics = page.keywords.split(',').map((name) => ({ '@type': 'Thing', name: name.trim() }));
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebSite',
+        '@id': `${SITE.origin}/#website`,
+        url: SITE.origin,
+        name: SITE.name,
+        description: SITE.description,
+        inLanguage: 'de-DE'
+      },
+      {
+        '@type': 'Person',
+        '@id': `${SITE.origin}/#publisher`,
+        name: 'Claudiu Dangulea',
+        url: 'https://www.dangulea.at/'
+      },
+      {
+        '@type': 'WebPage',
+        '@id': `${canonical}#webpage`,
+        url: canonical,
+        name: page.title,
+        headline: page.title,
+        description: page.description,
+        inLanguage: 'de-DE',
+        isPartOf: { '@id': `${SITE.origin}/#website` },
+        about: topics,
+        keywords: page.keywords,
+        dateModified: SITE.updated,
+        author: { '@id': `${SITE.origin}/#publisher` },
+        reviewedBy: { '@id': `${SITE.origin}/#publisher` },
+        mainEntityOfPage: { '@id': `${canonical}#webpage` },
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.hero-content h1', '.hero-content .lead'] },
+        additionalProperty: { '@type': 'PropertyValue', name: 'KI-Offenlegung', value: aiDisclosure }
+      }
+    ]
+  };
+}
 
 function link(item, className = '') {
   const classes = className ? ` class="${className}"` : '';
@@ -200,6 +246,7 @@ function renderRelated(page) {
 function renderDocument(page) {
   const canonicalPath = routePath(page.path);
   const canonical = `${SITE.origin}${canonicalPath}`;
+  const structuredData = jsonLd(pageSchema(page, canonical));
   const currentPath = canonicalPath;
   const nav = NAV.map((item) => {
     const isCurrent = routePath(item.href.replace(/\/$/, '') || '/') === currentPath;
@@ -216,20 +263,26 @@ function renderDocument(page) {
   <meta name="description" content="${esc(page.description)}">
   <meta name="keywords" content="${esc(page.keywords)}">
   <meta name="author" content="Claudiu Dangulea">
+  <meta name="generator" content="KI-generierte Seitenstruktur und Textfassung, menschlich geprüft">
+  <meta name="ai-generated" content="true">
+  <meta name="content-provenance" content="${esc(aiDisclosure)}">
   <meta name="robots" content="${page.noindex ? 'noindex,follow' : 'index,follow'}">
   <link rel="canonical" href="${canonical}">
+  <link rel="describedby" type="text/markdown" href="/llms.txt">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="ERP.Contact">
   <meta property="og:title" content="${esc(page.metaTitle)}">
   <meta property="og:description" content="${esc(page.description)}">
   <meta property="og:url" content="${canonical}">
   <meta property="og:image" content="${SITE.ogImage}">
+  <meta property="og:locale" content="de_DE">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${esc(page.metaTitle)}">
   <meta name="twitter:description" content="${esc(page.description)}">
   <meta name="twitter:image" content="${SITE.ogImage}">
   <meta name="theme-color" content="#0b716f">
   <link rel="icon" href="/assets/erp-contact-mark.svg" type="image/svg+xml">
+  <script type="application/ld+json">${structuredData}</script>
   <script>document.documentElement.classList.add('js')</script>
   <link rel="stylesheet" href="/assets/site.css">
 </head>
@@ -273,7 +326,7 @@ async function main() {
   for (const page of PAGES) await writeOutput(outputPath(page.path), renderDocument(page));
   for (const page of archivePages) await writeOutput(outputPath(page.path), renderDocument(page));
 
-  const notFound = { path: '/404', section: 'Nicht gefunden', title: 'Diese Seite wurde nicht gefunden.', metaTitle: 'Seite nicht gefunden — ERP.Contact', description: 'Die aufgerufene Seite ist nicht verfügbar.', keywords: '404, ERP.Contact', eyebrow: '404', lead: 'Bitte nutzen Sie die Navigation oder kehren Sie zur Startseite zurück.', blocks: [{ type: 'links', heading: 'Weiter', items: [{ label: 'Zur Startseite', href: '/', text: 'ERP.Contact öffnen' }, { label: 'Zur Historie', href: '/historie/', text: 'Quellaufnahme ansehen' }] }], related: [] };
+  const notFound = { path: '/404', section: 'Nicht gefunden', title: 'Diese Seite wurde nicht gefunden.', metaTitle: 'Seite nicht gefunden: ERP.Contact', description: 'Die aufgerufene Seite ist nicht verfügbar.', keywords: '404, ERP.Contact', eyebrow: '404', lead: 'Bitte nutzen Sie die Navigation oder kehren Sie zur Startseite zurück.', blocks: [{ type: 'links', heading: 'Weiter', items: [{ label: 'Zur Startseite', href: '/', text: 'ERP.Contact öffnen' }, { label: 'Zur Historie', href: '/historie/', text: 'Quellaufnahme ansehen' }] }], related: [] };
   await writeOutput(join(dist, '404.html'), renderDocument(notFound));
 
   const routes = { routes: [...PAGES, ...archivePages].map((page) => ({ path: routePath(page.path), title: page.metaTitle })) };

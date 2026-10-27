@@ -2,7 +2,7 @@
   "routes": [
     {
       "path": "/",
-      "title": "ERP.Contact — ERP, Prozesse und verantwortungsvolle KI"
+      "title": "ERP.Contact: ERP, Prozesse und verantwortungsvolle KI"
     },
     {
       "path": "/erp/grundlagen/",
@@ -86,7 +86,7 @@
     },
     {
       "path": "/ki-transparenz/",
-      "title": "KI-Transparenz — ERP.Contact"
+      "title": "KI-Transparenz bei ERP.Contact: Arbeitsweise"
     },
     {
       "path": "/ressourcen/",
@@ -106,7 +106,7 @@
     },
     {
       "path": "/impressum/",
-      "title": "Impressum — ERP.Contact"
+      "title": "Impressum und Anbieterangaben für ERP.Contact"
     },
     {
       "path": "/historie/",
