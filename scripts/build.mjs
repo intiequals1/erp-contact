@@ -331,7 +331,7 @@ async function main() {
 
   const routes = { routes: [...PAGES, ...archivePages].map((page) => ({ path: routePath(page.path), title: page.metaTitle })) };
   await writeOutput(join(dist, 'manus-routes.json'), `${JSON.stringify(routes, null, 2)}\n`);
-  const urls = PAGES.map((page) => `  <url><loc>${SITE.origin}${routePath(page.path)}</loc><lastmod>${SITE.updated}</lastmod><changefreq>monthly</changefreq><priority>${page.path === '/' ? '1.0' : '0.7'}</priority></url>`).join('\n');
+  const urls = PAGES.filter((page) => !page.noindex).map((page) => `  <url><loc>${SITE.origin}${routePath(page.path)}</loc><lastmod>${SITE.updated}</lastmod><changefreq>monthly</changefreq><priority>${page.path === '/' ? '1.0' : '0.7'}</priority></url>`).join('\n');
   await writeOutput(join(dist, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`);
   await writeOutput(join(dist, 'robots.txt'), `User-agent: *\nAllow: /\nDisallow: /historie/archiv/\n\nSitemap: ${SITE.origin}/sitemap.xml\n`);
   const readme = `# ERP.Contact Version 2\n\nStatischer Build. Die vollständige Version-1-Aufnahme liegt unter \`/historie/archiv/\`; sie bleibt öffentlich erreichbar, wird aber nicht eigenständig indexiert.\n`;
