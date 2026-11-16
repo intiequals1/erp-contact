@@ -1,5 +1,15 @@
 # Änderungsprotokoll
 
+## 2026-11-16 – Hinweis „im Aufbau“
+
+### Was geändert wurde
+
+- `scripts/build.mjs` (Seitenvorlage, `dist/` neu gebaut): Unter der Kopfzeile steht auf jeder Seite der Hinweis „Diese Website ist noch im Aufbau. Inhalte und Funktionen werden laufend ergänzt und verbessert.“, gleichlautend mit dangulea.at. Stile in `public/assets/site.css`.
+
+### Warum
+
+- Auf Wunsch des Betreibers tragen alle eigenen Websites denselben Hinweis zum Entwicklungsstand. Das macht sichtbar, dass Inhalte und Funktionen sich noch ändern.
+
 ## 2026-11-16 – Datenschutzerklärung an den Live-Betrieb angepasst, Datenschutzhinweis
 
 ### Was geändert wurde

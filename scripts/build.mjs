@@ -295,6 +295,7 @@ function renderDocument(page) {
       <nav id="hauptnavigation" class="primary-nav" aria-label="Hauptnavigation" data-primary-nav><ul>${nav}</ul></nav>
     </div>
   </header>
+  <aside class="site-notice" aria-label="Hinweis zum Entwicklungsstand"><p><strong>Diese Website ist noch im Aufbau.</strong> Inhalte und Funktionen werden laufend ergänzt und verbessert.</p></aside>
   <main id="inhalt">
     <section class="page-hero">
       <div class="hero-rail"><span>${esc(page.section)}</span><span class="rail-line" aria-hidden="true"></span><span>${page.path === '/' ? 'ERP' : '2026'}</span></div>
