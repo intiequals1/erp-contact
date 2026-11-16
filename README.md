@@ -40,9 +40,9 @@ Die Struktur, das Design und redaktionelle Textentwürfe dieser Website wurden m
 
 ## Rechtliche Seiten und Betreiberpflege
 
-Das Projekt enthält ein öffentlich verlinktes Impressum unter `/impressum/` und eine Datenschutzerklärung unter `/datenschutz/`. Der Stand umfasst die vorliegenden Angaben zu Diensteanbieter, Anschrift, Kontakt, GISA-Berechtigungen, gewerberechtlichem Kontext, Medieninhaber und Blattlinie. Plattform-Analyse und Plattform-Badge sind in der Projektkonfiguration deaktiviert.
+Das Projekt enthält ein öffentlich verlinktes Impressum unter `/impressum/` und eine Datenschutzerklärung unter `/datenschutz/`. Der Stand umfasst die vorliegenden Angaben zu Diensteanbieter, Anschrift, Kontakt, GISA-Berechtigungen, gewerberechtlichem Kontext, Medieninhaber und Blattlinie. Plattform-Analyse und Plattform-Badge sind in der Projektkonfiguration deaktiviert. Seit 16.11.2026 nennt die Datenschutzerklärung GitHub Pages als Hosting-Anbieter, und `public/assets/site.js` zeigt einen Datenschutzhinweis ohne Einwilligungsabfrage, der nur sein Schließen im localStorage vermerkt (`erpcontact.datenschutzhinweis.v1`). Änderungen und Gründe stehen in `CHANGELOG.md`.
 
-Vor einer öffentlichen Veröffentlichung muss der verantwortliche Betreiber die Angaben erneut abgleichen. Besonders zu prüfen und gegebenenfalls zu ergänzen sind eine tatsächlich erteilte Umsatzsteuer-Identifikationsnummer, abweichende Firmenbuchdaten, Änderungen bei Gewerbeberechtigungen, der endgültige Hosting-Dienstleister samt Auftragsverarbeitung sowie weitere Datenverarbeitungen wie Formulare, Newsletter, eingebettete Medien, Analyse- oder Marketingdienste. Solche Funktionen dürfen erst nach Aktualisierung der Datenschutzerklärung aktiviert werden.
+Vor einer öffentlichen Veröffentlichung muss der verantwortliche Betreiber die Angaben erneut abgleichen. Besonders zu prüfen und gegebenenfalls zu ergänzen sind eine tatsächlich erteilte Umsatzsteuer-Identifikationsnummer, abweichende Firmenbuchdaten, Änderungen bei Gewerbeberechtigungen, Änderungen beim Hosting (derzeit GitHub Pages) sowie weitere Datenverarbeitungen wie Formulare, Newsletter, eingebettete Medien, Analyse- oder Marketingdienste. Solche Funktionen dürfen erst nach Aktualisierung der Datenschutzerklärung aktiviert werden.
 
 ## Repository und Veröffentlichung
 
