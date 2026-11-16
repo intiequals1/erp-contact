@@ -19,3 +19,13 @@
 - Technisch war erp.contact sauber: nur Anfragen an erp.contact, keine Cookies, kein Browser-Speicher, keine eingebundenen Drittdienste.
 - Die Datenschutzerklärung entsprach aber nicht dem Live-Betrieb. Sie kündigte den Hosting-Anbieter für „vor einer öffentlichen Veröffentlichung“ an, obwohl die Seite bereits öffentlich über GitHub Pages ausgeliefert wird (Antwort-Header `server: GitHub.com`). Art. 13 DSGVO verlangt, Empfänger und Drittlandübermittlungen zu nennen. Bei GitHub Pages ist das GitHub, Inc. in den USA.
 - Der Datenschutzhinweis wurde auf Wunsch des Betreibers für alle eigenen Seiten einheitlich eingeführt. Eine Einwilligung wird bewusst nicht abgefragt, weil die Seite nichts einsetzt, das eine erfordert. Das Merken des Schließens ist in der Datenschutzerklärung offengelegt.
+
+## 2026-11-16 – Verweis auf die ePrivacy-Richtlinie
+
+### Was geändert wurde
+
+- Datenschutzerklärung, Abschnitt „Datenschutzhinweis“: Neben § 165 Abs. 3 TKG 2021 steht jetzt auch die zugrunde liegende EU-Norm, Art. 5 Abs. 3 der ePrivacy-Richtlinie 2002/58/EG.
+
+### Warum
+
+- Auf Hinweis des Betreibers. § 165 Abs. 3 TKG 2021 setzt die Vorgabe der ePrivacy-Richtlinie für das Speichern von Informationen im Endgerät in österreichisches Recht um. Der Doppelverweis macht für Leserinnen und Leser außerhalb Österreichs nachvollziehbar, auf welcher Regel die einwilligungsfreie Speicherung beruht.
